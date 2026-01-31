@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Header from '../../components/header'
+import RetroIcon from '../../components/retro-icon'
 
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
@@ -54,7 +55,9 @@ const Index = ({ posts = [], preview }) => {
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
-            <b>Note:</b>
+            <b>
+              <RetroIcon name="info" size={14} /> Note:
+            </b>
             {` `}Viewing in preview mode{' '}
             <Link href={`/api/clear-preview`}>
               <button className={blogStyles.escapePreview}>Exit Preview</button>

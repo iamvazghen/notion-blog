@@ -1,3 +1,9 @@
+.layout {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
 .layout img {
   margin: auto;
   max-width: 98%;
@@ -8,4 +14,35 @@
 .layout h1,
 .layout h2 {
   text-align: center;
+}
+
+.windowStack {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.toolbarRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    padding: 1rem 0.75rem 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .layout {
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
 }

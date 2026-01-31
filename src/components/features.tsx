@@ -1,52 +1,45 @@
-import Lightning from './svgs/lightning'
-import Jamstack from './svgs/jamstack'
-import Wifi from './svgs/wifi'
-import Lighthouse from './svgs/lighthouse'
-import Plus from './svgs/plus'
-import Notion from './svgs/notion'
-import Edit from './svgs/edit'
-import Scroll from './svgs/scroll'
+import RetroIcon from './retro-icon'
 
 const features = [
   {
     text: 'Blazing fast',
-    icon: Lightning,
+    icon: 'lightning',
   },
   {
     text: 'JAMstack based',
-    icon: Jamstack,
+    icon: 'jamstack',
   },
   {
     text: 'Always available',
-    icon: Wifi,
+    icon: 'wifi',
   },
   {
     text: 'Customizable',
-    icon: Edit,
+    icon: 'edit',
   },
   {
     text: 'Incremental SSG',
-    icon: Plus,
+    icon: 'plus',
   },
   {
     text: 'MIT Licensed',
-    icon: Scroll,
+    icon: 'scroll',
   },
   {
     text: 'Edit via Notion',
-    icon: Notion,
+    icon: 'notion',
   },
   {
     text: 'Great scores',
-    icon: Lighthouse,
+    icon: 'lighthouse',
   },
 ]
 
 const Features = () => (
   <div className="features">
-    {features.map(({ text, icon: Icon }) => (
+    {features.map(({ text, icon }) => (
       <div className="feature" key={text}>
-        {Icon && <Icon height={24} width={24} />}
+        <RetroIcon name={icon} size={18} className="feature-icon" />
         <h4>{text}</h4>
       </div>
     ))}

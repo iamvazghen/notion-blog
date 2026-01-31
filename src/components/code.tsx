@@ -26,9 +26,11 @@ const Code = ({ children, language = 'javascript' }) => {
           display: block;
           padding: 0.8rem;
           line-height: 1.5;
-          background: #f5f5f5;
+          background: #f1f1f1;
           font-size: 0.75rem;
-          border-radius: var(--radius);
+          border: 2px solid #4a4a4a;
+          box-shadow: inset 1px 1px 0 #ffffff,
+            inset -1px -1px 0 #808080;
         }
       `}</style>
     </>

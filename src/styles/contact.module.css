@@ -1,20 +1,37 @@
 .links {
-  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
   margin: 1rem auto;
-  max-width: 500px;
+  max-width: 520px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .links a {
-  width: 48px;
-  height: 48px;
-  margin: 0 10px;
-  display: inline-block;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 200ms ease;
+  text-decoration: none;
 }
 
 .links a:hover {
   opacity: 0.6;
+}
+
+.iconButton {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--win-surface);
+  border: 2px solid var(--win-shadow-dark);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .avatar {
@@ -25,6 +42,9 @@
 
 .avatar img {
   height: 120px;
+  border: 2px solid var(--win-shadow-dark);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .name {
@@ -33,4 +53,14 @@
 
 .name a {
   color: inherit;
+}
+
+@media (max-width: 520px) {
+  .avatar img {
+    height: 96px;
+  }
+
+  .links {
+    gap: 0.5rem;
+  }
 }

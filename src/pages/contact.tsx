@@ -4,29 +4,26 @@ import ExtLink from '../components/ext-link'
 import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
-import GitHub from '../components/svgs/github'
-import Twitter from '../components/svgs/twitter'
-import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
+import RetroIcon from '../components/retro-icon'
 
 const contacts = [
   {
-    Comp: Twitter,
+    icon: 'twitter',
     alt: 'twitter icon',
     link: 'https://twitter.com/_ijjk',
   },
   {
-    Comp: GitHub,
+    icon: 'github',
     alt: 'github icon',
     link: 'https://github.com/ijjk',
   },
   {
-    Comp: LinkedIn,
+    icon: 'linkedin',
     alt: 'linkedin icon',
     link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/',
   },
   {
-    Comp: Envelope,
+    icon: 'contact',
     alt: 'envelope icon',
     link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
   },
@@ -49,10 +46,12 @@ export default function Contact() {
         </div>
 
         <div className={contactStyles.links}>
-          {contacts.map(({ Comp, link, alt }) => {
+          {contacts.map(({ icon, link, alt }) => {
             return (
               <ExtLink key={link} href={link} aria-label={alt}>
-                <Comp height={32} />
+                <span className={contactStyles.iconButton}>
+                  <RetroIcon name={icon} size={20} />
+                </span>
               </ExtLink>
             )
           })}

@@ -7,8 +7,8 @@ const collectText = (el, acc = []) => {
   return acc.join('').trim()
 }
 
-const Heading = ({ children: component, id }: { children: any; id?: any }) => {
-  const children = component.props.children || ''
+const Heading = ({ children: component, id }: { children?: any; id?: any }) => {
+  const children = component?.props?.children || ''
   let text = children
 
   if (null == id) {

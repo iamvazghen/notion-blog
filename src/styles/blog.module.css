@@ -16,30 +16,29 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  border: 1px solid #eaeaea;
-  width: 400px;
-  padding: 16px;
-  border-radius: 5px;
+  border: 2px solid var(--win-shadow-dark);
+  width: min(480px, 92vw);
+  padding: 12px 14px;
+  background: var(--win-surface);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .escapePreview {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  padding: 10px;
-  height: 24px;
-  border-radius: 5px;
-  transition: all 0.2s ease 0s;
+  background-color: var(--win-surface);
+  border: 2px solid var(--win-shadow-dark);
+  color: var(--win-ink);
+  padding: 6px 10px;
+  height: auto;
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 .escapePreview:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  background-color: #e0e0e0;
+  color: var(--win-ink);
   cursor: pointer;
 }
 
@@ -49,13 +48,13 @@
   justify-content: flex-start;
 }
 .draftBadge {
-  border-radius: 16px;
-  background-color: black;
-  color: white;
-  font-size: 14px;
-  font-weight: 200;
-  padding: 2px 7px;
+  background-color: var(--win-title);
+  color: var(--win-title-text);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 6px;
   margin-right: 6px;
+  border: 1px solid var(--win-shadow-dark);
 }
 
 .noPosts {
@@ -65,7 +64,9 @@
 .postPreview {
   max-width: 600px;
   margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--win-shadow-dark);
+  padding-bottom: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 .postPreview:last-child {
@@ -90,7 +91,7 @@
 .post :global(img),
 .post :global(.asset-wrapper) {
   margin: 2rem auto;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
   max-width: 100%;
   display: block;
 }
@@ -104,11 +105,12 @@
   padding: 16px 16px 16px 12px;
   display: flex;
   width: 100%;
-  border-radius: 3px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: transparent;
-  background: rgba(235, 236, 237, 0.6);
+  border-color: var(--win-shadow-dark);
+  background: var(--win-surface);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .post :global(.callout .text) {
@@ -168,11 +170,12 @@
   align-items: stretch;
   text-align: left;
   overflow: hidden;
-  border: 1px solid #cacaca;
-  border-radius: 3px;
+  border: 2px solid var(--win-shadow-dark);
   position: relative;
   color: inherit;
   fill: inherit;
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .bookmarkInfo {
@@ -248,4 +251,19 @@
   border-radius: 1px;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 720px) {
+  .blogIndex {
+    padding: 0 1rem;
+  }
+
+  .post {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .postPreview {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
 }

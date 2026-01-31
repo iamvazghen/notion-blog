@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import fetch from 'node-fetch'
 import { useRouter } from 'next/router'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
+import RetroIcon from '../../components/retro-icon'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
@@ -93,7 +93,7 @@ const RenderPost = ({ post, redirect, preview }) => {
       key: string
       isNested?: boolean
       nested: string[]
-      children: React.ReactFragment
+      children: React.ReactNode
     }
   } = {}
 
@@ -142,7 +142,9 @@ const RenderPost = ({ post, redirect, preview }) => {
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
-            <b>Note:</b>
+            <b>
+              <RetroIcon name="info" size={14} /> Note:
+            </b>
             {` `}Viewing in preview mode{' '}
             <Link href={`/api/clear-preview?slug=${post.Slug}`}>
               <button className={blogStyles.escapePreview}>Exit Preview</button>
@@ -222,9 +224,15 @@ const RenderPost = ({ post, redirect, preview }) => {
 
           const renderHeading = (Type: string | React.ComponentType) => {
             toRender.push(
-              <Heading key={id}>
-                <Type key={id}>{textBlock(properties.title, true, id)}</Type>
-              </Heading>
+              React.createElement(
+                Heading,
+                { key: id },
+                React.createElement(
+                  Type as React.ComponentType<any>,
+                  { key: id },
+                  textBlock(properties.title, true, id)
+                )
+              )
             )
           }
 
