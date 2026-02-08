@@ -26,6 +26,10 @@ const features = [
     icon: 'scroll',
   },
   {
+    text: 'MIT Licensed',
+    icon: 'scroll',
+  },
+  {
     text: 'Edit via Notion',
     icon: 'notion',
   },

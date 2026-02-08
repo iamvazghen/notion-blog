@@ -1,28 +1,29 @@
-import { renderToString, ParseError } from 'katex'
+import { useEffect, useRef } from 'react'
+import { ParseError, render } from 'katex'
 
-function render(expression: string, displayMode: boolean): string {
-  let result: string
-  try {
-    result = renderToString(expression, { displayMode: displayMode })
-  } catch (e) {
-    if (e instanceof ParseError) {
-      result = e.message
-    }
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(e)
-    }
-  }
-  return result
-}
+const Equation = ({
+  children,
+  displayMode = true,
+}: {
+  children: string
+  displayMode?: boolean
+}) => {
+  const containerRef = useRef<HTMLSpanElement | null>(null)
 
-const Equation = ({ children, displayMode = true }) => {
-  return (
-    <span
-      dangerouslySetInnerHTML={{
-        __html: render(children, displayMode),
-      }}
-    />
-  )
+  useEffect(() => {
+    if (!containerRef.current) return
+    try {
+      render(children, containerRef.current, { displayMode })
+    } catch (e) {
+      const message = e instanceof ParseError ? e.message : 'Invalid equation'
+      containerRef.current.textContent = message
+      if (process.env.NODE_ENV !== 'production') {
+        console.error(e)
+      }
+    }
+  }, [children, displayMode])
+
+  return <span ref={containerRef} />
 }
 
 export default Equation

@@ -1,4 +1,4 @@
-const Jamstack = (props) => (
+const Jamstack = ({ title = 'Jamstack icon', ...props }) => (
   <svg
     width="24"
     height="24"
@@ -11,6 +11,7 @@ const Jamstack = (props) => (
     viewBox="0 0 24 24"
     {...props}
   >
+    <title>{title}</title>
     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
   </svg>
 )

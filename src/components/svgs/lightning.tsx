@@ -1,4 +1,4 @@
-const Lightning = (props) => (
+const Lightning = ({ title = 'Lightning icon', ...props }) => (
   <svg
     width="24"
     height="24"
@@ -11,6 +11,7 @@ const Lightning = (props) => (
     viewBox="0 0 24 24"
     {...props}
   >
+    <title>{title}</title>
     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
   </svg>
 )

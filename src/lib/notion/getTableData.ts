@@ -29,12 +29,13 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
       row.id = entry.value.id
     }
 
-    schemaKeys.forEach(key => {
+    schemaKeys.forEach((key) => {
       // might be undefined
-      let val = props[key] && props[key][0][0]
+      let val = props[key] && props[key][0] && props[key][0][0]
+      const hasType = props[key] && props[key][0] && props[key][0][1]
 
       // authors and blocks are centralized
-      if (val && props[key][0][1]) {
+      if (hasType) {
         const type = props[key][0][1][0]
 
         switch (type[0]) {
@@ -43,8 +44,13 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
             break
           case 'u': // user
             val = props[key]
-              .filter((arr: any[]) => arr.length > 1)
-              .map((arr: any[]) => arr[1][0][1])
+              .map((arr: any[]) => {
+                const token = arr && arr[1] && arr[1][0]
+                if (token && token[0] === 'u') return token[1]
+                if (typeof arr?.[0] === 'string') return arr[0]
+                return null
+              })
+              .filter(Boolean)
             break
           case 'p': // page (block)
             const page = col.recordMap.block[type[1]]
@@ -79,6 +85,14 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
             console.error('unknown type', type[0], type)
             break
         }
+      }
+
+      if (!hasType && Array.isArray(props[key])) {
+        const values = props[key]
+          .map((arr: any[]) => (typeof arr?.[0] === 'string' ? arr[0] : null))
+          .filter(Boolean)
+        if (values.length > 1) val = values
+        else if (values.length === 1) val = values[0]
       }
 
       if (typeof val === 'string') {

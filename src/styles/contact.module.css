@@ -6,6 +6,7 @@
   max-width: 520px;
   text-align: center;
   flex-wrap: wrap;
+  font-family: var(--font-sans);
 }
 
 .links a {
@@ -49,6 +50,7 @@
 
 .name {
   text-align: center;
+  font-family: var(--font-sans);
 }
 
 .name a {

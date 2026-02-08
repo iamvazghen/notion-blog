@@ -1,4 +1,4 @@
-const Edit = (props) => (
+const Edit = ({ title = 'Edit icon', ...props }) => (
   <svg
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -9,6 +9,7 @@ const Edit = (props) => (
     shapeRendering="geometricPrecision"
     {...props}
   >
+    <title>{title}</title>
     <path d="M4 21v-7" />
     <path d="M4 10V3" />
     <path d="M12 21v-9" />

@@ -1,44 +1,29 @@
-import rpc, { values } from './rpc'
+import notion from './client'
 
-export default async function getPageData(pageId: string) {
-  // a reasonable size limit for the largest blog post (1MB),
-  // as one chunk is about 10KB
-  const maximumChunckNumer = 100
+const listBlockChildren = async (blockId: string) => {
+  const blocks: any[] = []
+  let cursor: string | undefined
 
-  try {
-    var chunkNumber = 0
-    var data = await loadPageChunk({ pageId, chunkNumber })
-    var blocks = data.recordMap.block
+  do {
+    const response = await notion.blocks.children.list({
+      block_id: blockId,
+      start_cursor: cursor,
+      page_size: 100,
+    })
+    blocks.push(...response.results)
+    cursor = response.next_cursor || undefined
+  } while (cursor)
 
-    while (data.cursor.stack.length !== 0 && chunkNumber < maximumChunckNumer) {
-      chunkNumber = chunkNumber + 1
-      data = await loadPageChunk({ pageId, chunkNumber, cursor: data.cursor })
-      blocks = Object.assign(blocks, data.recordMap.block)
+  for (const block of blocks) {
+    if (block.has_children) {
+      block.children = await listBlockChildren(block.id)
     }
-    const blockArray = values(blocks)
-    if (blockArray[0] && blockArray[0].value.content) {
-      // remove table blocks
-      blockArray.splice(0, 3)
-    }
-    return { blocks: blockArray }
-  } catch (err) {
-    console.error(`Failed to load pageData for ${pageId}`, err)
-    return { blocks: [] }
   }
+
+  return blocks
 }
 
-export function loadPageChunk({
-  pageId,
-  limit = 30,
-  cursor = { stack: [] },
-  chunkNumber = 0,
-  verticalColumns = false,
-}: any) {
-  return rpc('loadPageChunk', {
-    pageId,
-    limit,
-    cursor,
-    chunkNumber,
-    verticalColumns,
-  })
+export default async function getPageData(pageId: string) {
+  const blocks = await listBlockChildren(pageId)
+  return { blocks }
 }

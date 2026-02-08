@@ -1,5 +1,6 @@
 .blogIndex {
-  padding: 0 5%;
+  padding: 1rem 2%;
+  font-family: var(--font-sans);
 }
 
 .blogIndex h1 {
@@ -63,14 +64,16 @@
 
 .postPreview {
   max-width: 600px;
-  margin: 10px auto;
-  border-bottom: 2px solid var(--win-shadow-dark);
-  padding-bottom: 0.75rem;
-  padding-top: 0.5rem;
+  margin: 12px auto;
+  border: 2px solid var(--win-shadow-dark);
+  padding: 0.75rem 1rem;
+  background: var(--win-surface);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
 }
 
 .postPreview:last-child {
-  border-bottom: none;
+  border-bottom: 2px solid var(--win-shadow-dark);
 }
 
 .postPreview h3,
@@ -82,26 +85,26 @@
   margin-top: 0;
 }
 
-.post :global(h2),
-.post :global(h3) {
+.post h2,
+.post h3 {
   margin: 3rem 0 1.5rem 0;
 }
 
-.post :global(video),
-.post :global(img),
-.post :global(.asset-wrapper) {
+.post video,
+.post img,
+.post .asset-wrapper {
   margin: 2rem auto;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
   max-width: 100%;
   display: block;
 }
 
-.post :global(.tweet) {
+.post .tweet {
   margin: 2rem auto;
   text-align: center;
 }
 
-.post :global(.callout) {
+.post .callout {
   padding: 16px 16px 16px 12px;
   display: flex;
   width: 100%;
@@ -113,15 +116,15 @@
     inset -1px -1px 0 var(--win-shadow);
 }
 
-.post :global(.callout .text) {
+.post .callout .text {
   margin-left: 8px;
 }
 
-.post :global(.underline) {
+.post .underline {
   text-decoration: underline;
 }
 
-.postPreview :global(.posted) {
+.postPreview .posted {
   margin-bottom: 0.5em;
 }
 
@@ -129,13 +132,18 @@
   max-width: calc(600px + 10%);
   margin: 0 auto;
   padding: 5%;
+  background: var(--win-surface);
+  border: 2px solid var(--win-shadow-dark);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
+  font-family: var(--font-sans);
 }
 
-.post :global(hr) {
+.post hr {
   margin-bottom: 2em;
 }
 
-.post :global(a + p) {
+.post a + p {
   margin-top: 0;
 }
 

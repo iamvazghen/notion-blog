@@ -1,25 +1,34 @@
-const collectText = (el, acc = []) => {
+import type { ReactElement, ReactNode } from 'react'
+
+const collectText = (el: ReactNode, acc: string[] = []) => {
   if (el) {
     if (typeof el === 'string') acc.push(el)
     if (Array.isArray(el)) el.map((item) => collectText(item, acc))
-    if (typeof el === 'object') collectText(el.props && el.props.children, acc)
+    if (typeof el === 'object') {
+      const element = el as ReactElement<{ children?: ReactNode }>
+      collectText(element.props?.children, acc)
+    }
   }
   return acc.join('').trim()
 }
 
-const Heading = ({ children: component, id }: { children?: any; id?: any }) => {
-  const children = component?.props?.children || ''
-  let text = children
+const Heading = ({
+  children: component,
+  id,
+}: {
+  children?: ReactNode
+  id?: string
+}) => {
+  const element = component as ReactElement<{ children?: ReactNode }>
+  const children = element?.props?.children || ''
+  const text = children
 
-  if (null == id) {
-    id = collectText(text)
-      .toLowerCase()
-      .replace(/\s/g, '-')
-      .replace(/[?!:]/g, '')
-  }
+  const derivedId =
+    id ??
+    collectText(text).toLowerCase().replace(/\s/g, '-').replace(/[?!:]/g, '')
 
   return (
-    <a href={`#${id}`} id={id} style={{ color: 'inherit' }}>
+    <a href={`#${derivedId}`} id={derivedId} style={{ color: 'inherit' }}>
       {component}
     </a>
   )

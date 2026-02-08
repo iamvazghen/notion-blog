@@ -1,10 +1,8 @@
-import Header from '../components/header'
 import ExtLink from '../components/ext-link'
-
-import sharedStyles from '../styles/shared.module.css'
-import contactStyles from '../styles/contact.module.css'
-
+import Header from '../components/header'
 import RetroIcon from '../components/retro-icon'
+import contactStyles from '../styles/contact.module.css'
+import sharedStyles from '../styles/shared.module.css'
 
 const contacts = [
   {

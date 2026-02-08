@@ -1,5 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import getPageData from '../../lib/notion/getPageData'
+import type { NextApiRequest, NextApiResponse } from 'next'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {

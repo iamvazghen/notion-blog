@@ -24,8 +24,27 @@ const normalizeId = (id) => {
   )}-${compact.substr(16, 4)}-${compact.substr(20)}`
 }
 
-const NOTION_TOKEN = process.env.NOTION_TOKEN
-const BLOG_INDEX_ID = normalizeId(process.env.BLOG_INDEX_ID)
+const normalizeToken = (token) => {
+  if (!token) return token
+  let cleaned = String(token).trim()
+  if (
+    (cleaned.startsWith('"') && cleaned.endsWith('"')) ||
+    (cleaned.startsWith("'") && cleaned.endsWith("'"))
+  ) {
+    cleaned = cleaned.slice(1, -1).trim()
+  }
+  if (cleaned.includes('%')) {
+    try {
+      cleaned = decodeURIComponent(cleaned)
+    } catch (_) {
+      // keep original token if decode fails
+    }
+  }
+  return cleaned
+}
+
+const NOTION_TOKEN = normalizeToken(process.env.NOTION_TOKEN)
+const BLOG_INDEX_ID = normalizeId(process.env.BLOG_INDEX_ID || '')
 const API_ENDPOINT = 'https://www.notion.so/api/v3'
 const BLOG_INDEX_CACHE = path.resolve('.blog_index_data')
 

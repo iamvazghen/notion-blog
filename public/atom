@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2026-02-08T19:35:43.691Z</updated>
+    <id>My Blog</id>
+    <entry>
+      <id>/blog/clothing</id>
+      <title>What do I think about clothing?</title>
+      <link href="/blog/clothing"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/clothing">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/leadgenagency</id>
+      <title>Why did I choose to start a lead gen agency?</title>
+      <link href="/blog/leadgenagency"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/leadgenagency">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/holding</id>
+      <title>Why did I start the Tsekhamard Holding?</title>
+      <link href="/blog/holding"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/holding">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/politicalparty</id>
+      <title>Why  I will always remain outside of any associations with any Armenian political party?</title>
+      <link href="/blog/politicalparty"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/politicalparty">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/podcastreason</id>
+      <title>Why did I start the podcast?</title>
+      <link href="/blog/podcastreason"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/podcastreason">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/holdingendgoal</id>
+      <title>What are the end goal of the holding?</title>
+      <link href="/blog/holdingendgoal"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/holdingendgoal">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/writings</id>
+      <title>What am I writing?</title>
+      <link href="/blog/writings"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/writings">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/goals</id>
+      <title>What are the goals I’m desperate to achieve in my lifetime?</title>
+      <link href="/blog/goals"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/goals">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/knowyourlimits</id>
+      <title>What is enough?</title>
+      <link href="/blog/knowyourlimits"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/knowyourlimits">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/investment strategies</id>
+      <title>Why are investment strategies also free to access</title>
+      <link href="/blog/investment strategies"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/investment strategies">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/holdingvalues</id>
+      <title>What are the values of the holding?</title>
+      <link href="/blog/holdingvalues"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/holdingvalues">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/knowledgebase</id>
+      <title>Why is knowledge base completely free to access?</title>
+      <link href="/blog/knowledgebase"/>
+      <updated>2026-01-31T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/knowledgebase">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/identity</id>
+      <title>Struggle for clarity of identity</title>
+      <link href="/blog/identity"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/identity">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/advice</id>
+      <title>Best advice in life I could ever give?</title>
+      <link href="/blog/advice"/>
+      <updated>2026-02-05T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/advice">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/reading</id>
+      <title>Have I ever read a book from cover to cover?</title>
+      <link href="/blog/reading"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/reading">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/fear</id>
+      <title>What I’m scared of</title>
+      <link href="/blog/fear"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/fear">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/value-of-people</id>
+      <title>What is more valuable than people of the nation?</title>
+      <link href="/blog/value-of-people"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/value-of-people">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/define-the-enemy</id>
+      <title>Find the enemy</title>
+      <link href="/blog/define-the-enemy"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/define-the-enemy">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/why</id>
+      <title>Why do I care?</title>
+      <link href="/blog/why"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/why">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/politics</id>
+      <title>On death of politics</title>
+      <link href="/blog/politics"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/politics">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/poems against classics</id>
+      <title>The small difference between a poem and rap lyrics</title>
+      <link href="/blog/poems against classics"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/poems against classics">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/the-phrase</id>
+      <title>The phrase that helps me</title>
+      <link href="/blog/the-phrase"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/the-phrase">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/love</id>
+      <title>Nature of love</title>
+      <link href="/blog/love"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/love">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/concentration-of-effort</id>
+      <title>Why do I only focus on improving Armenian society</title>
+      <link href="/blog/concentration-of-effort"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/concentration-of-effort">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+    <entry>
+      <id>/blog/life-values</id>
+      <title>Problems I would like to solve in Armenian society?</title>
+      <link href="/blog/life-values"/>
+      <updated>2026-02-06T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/life-values">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Vazgen Vardanian</name></author>
+    </entry>
+  </feed>

@@ -1,11 +1,17 @@
-import React from 'react'
+import type { ComponentType } from 'react'
+
+type IconProps = {
+  className?: string
+  size?: number
+  title?: string
+}
 
 const iconModule = require('@react95/icons') as Record<
   string,
-  React.ComponentType<any>
+  ComponentType<IconProps>
 >
 
-const fallbackIcon = (props: { className?: string; size?: number }) => (
+const fallbackIcon = (props: IconProps) => (
   <span
     className={props.className}
     style={{
@@ -13,7 +19,8 @@ const fallbackIcon = (props: { className?: string; size?: number }) => (
       width: props.size || 16,
       height: props.size || 16,
     }}
-    aria-hidden="true"
+    aria-hidden={props.title ? undefined : 'true'}
+    title={props.title}
   />
 )
 
@@ -36,7 +43,7 @@ const iconCandidates: Record<string, string[]> = {
   linkedin: ['Users', 'Network', 'User'],
 }
 
-const pickIcon = (name: string) => {
+const pickIcon = (name: string): ComponentType<IconProps> | null => {
   const candidates = iconCandidates[name] || [name]
   for (const candidate of candidates) {
     if (iconModule[candidate]) return iconModule[candidate]
@@ -55,17 +62,12 @@ const RetroIcon = ({
   className?: string
   title?: string
 }) => {
-  const IconComp = pickIcon(name) || fallbackIcon
+  const IconComp: ComponentType<IconProps> = pickIcon(name) || fallbackIcon
   const isFallback = IconComp === fallbackIcon
   const mergedClassName = isFallback
     ? [className, 'retro-icon-fallback'].filter(Boolean).join(' ')
     : className
-  return (
-    <IconComp
-      className={mergedClassName}
-      size={size}
-    />
-  )
+  return <IconComp className={mergedClassName} size={size} title={title} />
 }
 
 export default RetroIcon

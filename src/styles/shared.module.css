@@ -2,6 +2,11 @@
   max-width: 1080px;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 2.5rem;
+  background: var(--win-surface);
+  border: 2px solid var(--win-shadow-dark);
+  box-shadow: inset 1px 1px 0 var(--win-light),
+    inset -1px -1px 0 var(--win-shadow);
+  font-family: var(--font-sans);
 }
 
 .layout img {
